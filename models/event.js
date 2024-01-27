@@ -1,4 +1,5 @@
 const mongoose=require('mongoose');
+// this is the schema
 var Schema=new mongoose.Schema(
     {
         title : {
