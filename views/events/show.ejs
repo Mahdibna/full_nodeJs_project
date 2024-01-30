@@ -1,9 +1,17 @@
-<%-include('../partials/header.ejs') %>
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <h2 class="display-4">show single event</h2>
-        </div>
+<%- include('../partials/header.ejs') %>
+<div class="row mt-3">
+    <div class="col-sm-6 col-md-4">
+        <% if (element) { %>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><%= element.title %></h5>
+                    <p class="card-text"><%= element.description %></p>
+                    <p><%= element.location %></p>
+                </div>
+            </div>
+        <% } else { %>
+            <p>Event not found</p>
+        <% } %>
     </div>
 </div>
-<%-include('../partials/footer.ejs') %>
+<%- include('../partials/footer.ejs') %>

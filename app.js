@@ -1,5 +1,6 @@
 const express=require("express")
 const app=express();
+const event_seed=require('./seed/event-seed');
 app.set('view engine', 'ejs');
 app.use(express.static('public'))
 app.use(express.static('node_modules'))
